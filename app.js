@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('[data-tab-target]');
     const tabPanels = document.querySelectorAll('[data-tab-panel]');
 
-    function switchTab(targetId) {
+    function switchTab(targetId, updateHash = true) {
         // Normaliza o ID
         const activeTabId = targetId.replace('#', '');
         let found = false;
@@ -40,10 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Atualiza a hash na URL sem scrollar a tela
-        if (history.pushState) {
-            history.pushState(null, null, '#' + activeTabId);
-        } else {
-            location.hash = '#' + activeTabId;
+        if (updateHash) {
+            if (history.pushState) {
+                history.pushState(null, null, '#' + activeTabId);
+            } else {
+                location.hash = '#' + activeTabId;
+            }
         }
 
         // Roda animações do AOS para re-alinhamento de elementos
@@ -57,17 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             const target = button.getAttribute('data-tab-target');
-            switchTab(target);
+            switchTab(target, true); // Atualiza o hash no clique manual
         });
     });
 
     // Controla inicialização por hash da URL (Campanhas do Ads direcionadas)
     const currentHash = window.location.hash;
     if (currentHash === '#voce' || currentHash === '#empresa') {
-        switchTab(currentHash);
+        switchTab(currentHash, false); // Não atualiza hash na inicialização para evitar rolagem
     } else {
         // Default é B2B (empresa)
-        switchTab('#empresa');
+        switchTab('#empresa', false); // Não atualiza hash na inicialização para manter URL limpa
     }
 
     // ----------------------------------------------------
