@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Optimization -->
+    <title>Evolutio | Consultoria em Gestão de Pessoas e DHO</title>
+    <link rel="icon" type="image/png" href="assets/img/logoBlack.png">
+    <meta name="description"
+        content="Mais de 20 anos de experiência estruturando a Gestão Estratégica de Pessoas em pequenas e médias empresas (B2B) e impulsionando carreiras (B2C) com o Método Joia Rara.">
+    <meta name="keywords"
+        content="consultoria rh, gestao de pessoas pmes, desenvolvimento lideranças, recrutamento e selecao, mentoria de carreira, priscila queiroz, evolutio dh">
+    <meta name="author" content="Priscila Queiroz">
+
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Evolutio | Consultoria em Gestão de Pessoas e DHO">
+    <meta property="og:description"
+        content="Torne seu negócio mais competitivo investindo no seu maior ativo: as Pessoas. Mais de 20 anos de expertise em RH estratégico.">
+    <meta property="og:image" content="assets/img/smilingPeople.jpg">
+    <meta property="og:url" content="https://www.evolutiodh.com.br">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#67C1A7',
+                            dark: '#4fae93',
+                            light: '#e1f3ee',
+                        },
+                        secondary: {
+                            DEFAULT: '#0F172A',
+                            light: '#1E293B',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS.js (Animate on Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-700 overflow-x-hidden antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <img src="assets/img/logoBlack.png" alt="Evolutio Logo"
+                    class="h-10 w-auto hover:opacity-90 transition-opacity">
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#solucoes" class="font-medium text-slate-600 hover:text-primary transition-colors">Serviços</a>
+                <a href="#sobre" class="font-medium text-slate-600 hover:text-primary transition-colors">Quem Somos</a>
+                <a href="#clientes" class="font-medium text-slate-600 hover:text-primary transition-colors">Clientes</a>
+                <a href="#depoimentos"
+                    class="font-medium text-slate-600 hover:text-primary transition-colors">Depoimentos</a>
+                <a href="#contato" class="font-medium text-slate-600 hover:text-primary transition-colors">Contato</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me/5511933892468" target="_blank" data-wa-trigger="Navbar-Desktop"
+                    class="btn-primary-custom px-5 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2">
+                    <!-- WhatsApp SVG Icon -->
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.595-1.006-5.034-2.837-6.87C16.656 2.16 14.234.96 11.643.96c-5.439 0-9.868 4.373-9.87 9.737-.001 1.763.486 3.488 1.41 5.02l-.997 3.637 3.864-.999zm11.387-7.797c-.301-.15-1.78-.879-2.053-.978-.275-.099-.475-.149-.675.15-.199.3-.773.977-.948 1.176-.175.2-.35.225-.651.075-1.041-.519-1.814-.919-2.522-2.129-.187-.318-.018-.474.129-.637.133-.147.301-.349.451-.524.149-.174.199-.299.299-.498.1-.2.05-.374-.025-.524-.075-.15-.675-1.623-.925-2.223-.244-.587-.492-.507-.675-.516-.174-.008-.374-.01-.574-.01-.2 0-.526.075-.802.374-.275.3-1.05 1.024-1.05 2.497 0 1.471 1.075 2.893 1.225 3.093.15.2 2.115 3.227 5.125 4.524.714.309 1.272.494 1.707.632.717.228 1.368.196 1.883.119.574-.085 1.78-.727 2.03-1.429.25-.701.25-1.3.175-1.429-.075-.125-.275-.199-.575-.349z" />
+                    </svg>
+                    Fale Conosco
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn"
+                class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors flex flex-col gap-1.5 w-10 h-10 items-center justify-center"
+                aria-label="Abrir Menu">
+                <span class="hamburger-line w-6 h-0.5 bg-slate-800 rounded-full"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-slate-800 rounded-full"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-slate-800 rounded-full"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed top-20 left-0 w-full bg-white/95 backdrop-blur-md z-40 flex flex-col items-center gap-5 text-center text-lg font-semibold border-b border-slate-100 py-8 shadow-xl shadow-slate-200/20 mobile-menu-transition opacity-0 pointer-events-none -translate-y-4">
+            <a href="#solucoes" class="text-slate-700 hover:text-primary transition-colors">Serviços</a>
+            <a href="#sobre" class="text-slate-700 hover:text-primary transition-colors">Quem Somos</a>
+            <a href="#clientes" class="text-slate-700 hover:text-primary transition-colors">Clientes</a>
+            <a href="#depoimentos" class="text-slate-700 hover:text-primary transition-colors">Depoimentos</a>
+            <a href="#contato" class="text-slate-700 hover:text-primary transition-colors">Contato</a>
+            <a href="https://wa.me/5511933892468" target="_blank" data-wa-trigger="Navbar-Mobile"
+                class="btn-primary-custom px-6 py-2.5 rounded-xl flex items-center gap-2 mt-2 text-sm">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.595-1.006-5.034-2.837-6.87C16.656 2.16 14.234.96 11.643.96c-5.439 0-9.868 4.373-9.87 9.737-.001 1.763.486 3.488 1.41 5.02l-.997 3.637 3.864-.999zm11.387-7.797c-.301-.15-1.78-.879-2.053-.978-.275-.099-.475-.149-.675.15-.199.3-.773.977-.948 1.176-.175.2-.35.225-.651.075-1.041-.519-1.814-.919-2.522-2.129-.187-.318-.018-.474.129-.637.133-.147.301-.349.451-.524.149-.174.199-.299.299-.498.1-.2.05-.374-.025-.524-.075-.15-.675-1.623-.925-2.223-.244-.587-.492-.507-.675-.516-.174-.008-.374-.01-.574-.01-.2 0-.526.075-.802.374-.275.3-1.05 1.024-1.05 2.497 0 1.471 1.075 2.893 1.225 3.093.15.2 2.115 3.227 5.125 4.524.714.309 1.272.494 1.707.632.717.228 1.368.196 1.883.119.574-.085 1.78-.727 2.03-1.429.25-.701.25-1.3.175-1.429-.075-.125-.275-.199-.575-.349z" />
+                </svg>
+                Conversar no WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section (B2B Focus) -->
+    <section class="relative min-h-[90vh] pt-32 pb-20 flex items-center bg-gradient-to-br from-slate-50 via-white to-primary-light/25 overflow-hidden">
+        
+        <!-- Background Decor Elements -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-[80px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary-light/45 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+            
+            <!-- Hero Content (Left) -->
+            <div class="lg:col-span-7 text-center lg:text-left order-2 lg:order-1" data-aos="fade-right">
+                
+                <!-- Premium Credibility Badge (Visible only on mobile inside text column) -->
+                <div class="inline-flex sm:hidden items-center gap-3 bg-white border border-slate-100/80 p-2.5 rounded-2xl shadow-sm mb-6 float-badge">
+                    <div class="bg-primary/10 text-primary font-black text-xl px-3.5 py-1.5 rounded-xl font-heading">
+                        20+
+                    </div>
+                    <div class="text-left leading-tight">
+                        <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider font-heading">Anos de Atuação</h4>
+                        <p class="text-[10px] text-slate-500 font-body">em RH & DHO Estratégico</p>
+                    </div>
+                </div>
+                
+                <!-- Main Header Title -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                    Estruturamos a Gestão de Pessoas para o <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">crescimento do seu negócio</span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0 font-body">
+                    Consultoria de RH especializada em estruturação estratégica, mentoria de líderes e implantação comportamental para impulsionar a competitividade de pequenas e médias empresas.
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#solucoes" class="btn-primary-custom px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all text-center text-sm md:text-base flex items-center justify-center gap-2">
+                        Explorar Soluções B2B
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <a href="#contato" class="btn-secondary-custom px-8 py-4 rounded-xl font-bold transition-all text-center text-sm md:text-base flex items-center justify-center gap-2">
+                        Falar com Especialista
+                    </a>
+                </div>
+                
+                <!-- Quick Benefits -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 mt-16 border-t border-slate-200/60 pt-8 max-w-2xl mx-auto lg:mx-0">
+                    <div class="text-center sm:text-left sm:pr-6 pb-4 sm:pb-0">
+                        <div class="flex justify-center sm:justify-start items-center gap-2 mb-1.5">
+                            <span class="w-2 h-2 rounded-full bg-primary block"></span>
+                            <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wider">Autonomia</h4>
+                        </div>
+                        <p class="text-xs text-slate-500 font-body leading-relaxed">Sistemas e cultura organizados para rodar de forma madura.</p>
+                    </div>
+                    <div class="text-center sm:text-left border-y sm:border-y-0 sm:border-x border-slate-200 py-4 sm:py-0 px-4 sm:px-6">
+                        <div class="flex justify-center sm:justify-start items-center gap-2 mb-1.5">
+                            <span class="w-2 h-2 rounded-full bg-primary block"></span>
+                            <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wider font-heading">Sustentabilidade</h4>
+                        </div>
+                        <p class="text-xs text-slate-500 font-body leading-relaxed">Redução drástica de rotatividade e custos de recontratação.</p>
+                    </div>
+                    <div class="text-center sm:text-left sm:pl-6 pt-4 sm:pt-0">
+                        <div class="flex justify-center sm:justify-start items-center gap-2 mb-1.5">
+                            <span class="w-2 h-2 rounded-full bg-primary block"></span>
+                            <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wider">Competitividade</h4>
+                        </div>
+                        <p class="text-xs text-slate-500 font-body leading-relaxed">Sua empresa preparada para atrair e blindar talentos valiosos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Graphics / Layered Images (Right) -->
+            <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center relative" data-aos="fade-left">
+                <div class="relative w-full max-w-sm md:max-w-md aspect-square lg:aspect-auto lg:h-[540px] lg:max-w-none">
+                    
+                    <!-- Decorative background circles -->
+                    <div class="absolute -inset-4 bg-primary/10 rounded-[3rem] transform rotate-3 -z-10"></div>
+                    <div class="absolute inset-0 bg-slate-900/5 rounded-[3rem] transform -rotate-3 -z-10"></div>
+                    
+                    <!-- Main Image (Team Working) -->
+                    <img src="assets/img/empresa/colleagues-working-together-project-scaled-qpiekhxoh1xfm6u7nippo7xr7cpvl7gsfn6xc8yvew.jpg" alt="Equipe trabalhando na Evolutio" class="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-2 border-white">
+                    
+                    <!-- Overlapping Sub-Image (Meeting Detail) -->
+                    <div class="absolute -top-10 -right-6 md:-right-10 w-2/5 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-4 border-white hidden sm:block">
+                        <img src="assets/img/empresa/business-people-talking-documents-qpieu3uac32yaovrjo8f5sndt5cy9tm0f79ly2pzt4.jpg" alt="Discussão de projetos" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Floating Glassmorphic Statistic Card -->
+                    <div class="absolute -bottom-6 -left-6 md:-left-8 bg-white/95 backdrop-blur border border-slate-100 p-5 rounded-2xl shadow-xl max-w-[240px] hidden sm:flex items-center gap-4 float-badge">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 font-semibold font-body">Histórico de Sucesso</div>
+                            <div class="text-sm font-extrabold text-slate-800 leading-tight mt-0.5">+4.000 Líderes & Talentos Lapidados</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Glassmorphic Statistic Card 2 (20+ Anos) -->
+                    <div class="absolute -bottom-6 -right-6 md:-right-8 bg-white/95 backdrop-blur border border-slate-100 p-4 rounded-2xl shadow-xl max-w-[220px] hidden sm:flex items-center gap-3 float-badge">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary font-black text-lg flex items-center justify-center flex-shrink-0 font-heading">
+                            20+
+                        </div>
+                        <div class="text-left leading-tight">
+                            <h4 class="text-[11px] font-bold text-slate-800 uppercase tracking-wider font-heading">Anos de Atuação</h4>
+                            <p class="text-[9px] text-slate-500 font-body">em RH & DHO Estratégico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+    <!-- Interactive Solutions (SPA Layout) -->
+    <section id="solucoes" class="py-20 md:py-28 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Nossas Soluções</h2>
+                <p class="text-slate-600 text-base md:text-lg">
+                    Escolha a frente de atendimento de que necessita. Desenvolvemos estratégias sob medida para
+                    alavancar empresas e impulsionar profissionais.
+                </p>
+
+                <!-- Tab Selector Control -->
+                <div class="inline-flex p-1.5 bg-slate-200/70 rounded-2xl mt-8">
+                    <button data-tab-target="#empresa"
+                        class="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2">
+                        <!-- Briefcase Icon -->
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        Para sua Empresa (B2B)
+                    </button>
+                    <button data-tab-target="#voce"
+                        class="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2">
+                        <!-- User Icon -->
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                        Para Você (B2C)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Container -->
+            <div class="relative min-h-[500px]">
+
+                <!-- B2B PANEL (ACTIVE DEFAULT) -->
+                <div id="empresa" data-tab-panel class="tab-content space-y-16">
+
+                    <!-- Services Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                        <!-- Card 1 -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Mentoria de Líderes</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Desenvolvimento e lapidação de novas
+                                    lideranças e gestores de alto impacto para alinhar metas à cultura humana.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Saiba Mais &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Recrutamento & Seleção</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Conexão ideal entre a necessidade da
+                                    sua empresa e profissionais de alto potencial previamente lapidados.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Saiba Mais &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between"
+                            data-aos="fade-up" data-aos-delay="300">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Treinamento & DHO</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Programas personalizados para
+                                    capacitar equipes técnicos e gerenciais a atingirem excelente performance.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Saiba Mais &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between"
+                            data-aos="fade-up" data-aos-delay="400">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Estruturação de RH</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Implantação completa do setor de RH da
+                                    base à estratégia final nas pequenas e médias empresas.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Saiba Mais &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Mapeamento Comportamental</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Avaliações psicológicas de perfil de
+                                    colaboradores para readequação, promoção ou fit cultural ideal.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Saiba Mais &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Riscos Psicossociais</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Avaliação preventiva de riscos do
+                                    ambiente, em conformidade com as normas e segurança do trabalho.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Saiba Mais &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between"
+                            data-aos="fade-up" data-aos-delay="300">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Clima Organizacional</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Pesquisa profunda com diagnóstico de
+                                    gargalos internos para melhorar a produtividade e satisfação.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Saiba Mais &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between"
+                            data-aos="fade-up" data-aos-delay="400">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8.684 10.742l-2.084-1.185a1 1 0 00-1 0L3.516 10.74a1 1 0 00-.516.868v4.784a1 1 0 00.516.868l2.084 1.185a1 1 0 001 0l2.084-1.185a1 1 0 00.516-.868V11.61a1 1 0 00-.516-.868zM11.243 4.102a1 1 0 011.514 0l8.243 8.242a1 1 0 010 1.415l-8.243 8.242a1 1 0 01-1.514 0l-8.243-8.242a1 1 0 010-1.415l8.243-8.242z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Outplacement</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Apoio na transição humanizada de
+                                    profissionais demitidos, garantindo reputação positiva de marca.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Saiba Mais &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advantages & Lectures (B2B) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-8">
+
+                        <!-- Advantages -->
+                        <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-sm"
+                            data-aos="fade-right">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-6">Vantagens da Consultoria</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div
+                                        class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm">Olhar de especialistas</h4>
+                                        <p class="text-slate-500 text-xs">Diagnósticos imparciais por profissionais com mais de 20 anos de RH.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div
+                                        class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm">Crescimento sustentável</h4>
+                                        <p class="text-slate-500 text-xs">Setores de RH resilientes prontos para apoiar a expansão no mercado.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div
+                                        class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm">Eficiência de recursos</h4>
+                                        <p class="text-slate-500 text-xs">Redução de custos com rotatividade e demissões equivocadas.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div
+                                        class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm">Líderes de alto desempenho</h4>
+                                        <p class="text-slate-500 text-xs">Desenvolvimento de lideranças alinhadas aos resultados.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Middle Team Image Card -->
+                        <div class="hidden lg:block rounded-3xl overflow-hidden border border-slate-100 shadow-sm relative group h-full min-h-[350px]" data-aos="zoom-in">
+                            <img src="assets/img/empresa/medium-shot-people-chatting-table-scaled-qpieqy3td4r99vgyzt2ka3clxixjeg2hnkbuvlemq0.jpg" alt="Equipe discutindo estratégias de RH" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                <h4 class="text-white font-bold text-lg mb-1">Cultura e Liderança</h4>
+                                <p class="text-slate-300 text-xs font-body">Lapidando os talentos que constroem a história da sua marca.</p>
+                            </div>
+                        </div>
+
+                        <!-- Lectures -->
+                        <div class="bg-slate-900 text-white p-8 md:p-12 rounded-3xl flex flex-col justify-between"
+                            data-aos="fade-left">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-6">Palestras & Workshops Corporativos</h3>
+                                <p class="text-slate-400 text-sm mb-6">Desenvolvemos dinâmicas sob medida para
+                                    convenções, SIPATs ou eventos de desenvolvimento corporativo:</p>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        <span class="text-sm font-medium text-slate-300">Liderança e seus
+                                            desafios</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        <span class="text-sm font-medium text-slate-300">Comunicação
+                                            Organizacional</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        <span class="text-sm font-medium text-slate-300">Assédio moral no
+                                            trabalho</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        <span class="text-sm font-medium text-slate-300">Mulheres: Carreira &
+                                            Mercado</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        <span class="text-sm font-medium text-slate-300">Gestão das emoções no
+                                            trabalho</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        <span class="text-sm font-medium text-slate-300">Comportamento Seguro
+                                            (SIPAT)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#contato"
+                                class="btn-primary-custom px-6 py-3.5 rounded-xl font-bold text-sm text-center inline-block mt-8">
+                                Solicitar Proposta de Palestra
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B2C PANEL (PERSONS/CAREER) -->
+                <div id="voce" data-tab-panel class="tab-content hidden space-y-16">
+
+                    <!-- Services Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Revisão de Currículo</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Reformulação e estruturação do seu
+                                    currículo com foco nas palavras-chave e exigências atuais do mercado.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Quero este serviço &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Otimização de LinkedIn</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Ajustes estratégicos de cabeçalho,
+                                    sobre, histórico e competências para atrair mais recrutadores.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Quero este serviço &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3 font-heading">Simulado de Entrevistas
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Preparação e feedback imediato sobre
+                                    postura, respostas estratégicas e técnicas de comunicação.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Quero este serviço &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-primary/30 transition-all hover:shadow-xl duration-300 flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">Mapeamento de Carreira</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed font-body">Análise detalhada de
+                                    competências e tendências profissionais para descobrir seu norte ideal.</p>
+                            </div>
+                            <a href="#contato"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-6 hover:text-primary-dark transition-colors">
+                                Quero este serviço &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Methodology & Advantages (B2C) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-8">
+
+                        <!-- Methodology Joia Rara -->
+                        <div class="bg-slate-900 text-white p-8 md:p-10 rounded-3xl flex flex-col justify-between">
+                            <div>
+                                <div class="inline-block px-3 py-1 bg-primary/20 text-primary font-bold text-xs rounded-full mb-4">
+                                    Metodologia Autoral
+                                </div>
+                                <h3 class="text-2xl font-extrabold text-white mb-6">O Método Joia Rara</h3>
+                                <p class="text-slate-300 text-xs md:text-sm leading-relaxed mb-6 font-body">
+                                    A metodologia <strong>Joia Rara</strong> ajuda o profissional a colocar em prática os seus aprendizados e construir a jornada de desenvolvimento de forma estratégica, alcançando destaque pelo seu diferencial para o mercado.
+                                </p>
+                            </div>
+                            <div class="border-t border-slate-800 pt-6">
+                                <p class="text-slate-400 text-[10px] italic">Criado e consolidado por Priscila Queiroz com base em +20 anos em Psicologia e RH.</p>
+                            </div>
+                        </div>
+
+                        <!-- Center B2C Coaching Image -->
+                        <div class="hidden lg:block rounded-3xl overflow-hidden border border-slate-100 shadow-sm relative group h-full min-h-[350px]">
+                            <img src="assets/img/empresa/person-sharing-feelings-emotions-therapy-session-1-scaled-qpif3skermcby0t7zcz0cune73m4lj2ff5aqzqcxoo.jpg" alt="Sessão de mapeamento e mentoria de carreira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                <h4 class="text-white font-bold text-lg mb-1 font-heading">Sua Joia Interna</h4>
+                                <p class="text-slate-300 text-xs font-body">Lapidando o seu diferencial competitivo para o mercado profissional.</p>
+                            </div>
+                        </div>
+
+                        <!-- Advantages Career -->
+                        <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-sm">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-6 font-heading">Por que contratar?</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm">Economia de tempo</h4>
+                                        <p class="text-slate-500 text-xs">Evite despender recursos com cursos que não te levam ao seu objetivo.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm font-heading">Clareza & Direção</h4>
+                                        <p class="text-slate-500 text-xs">Entenda com precisão onde você está hoje e onde pode chegar.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm">Segurança na Escolha</h4>
+                                        <p class="text-slate-500 text-xs font-body">Fundamentos técnicos para realizar transições de carreira seguras.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credibility Badges & Overview -->
+    <section class="py-12 bg-slate-900 text-white relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+                <div class="p-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-extrabold text-primary mb-2">+<span class="counter" data-target="20">0</span> Anos</div>
+                    <p class="text-slate-400 text-sm md:text-base">De expertise em Gestão de Pessoas e DHO no mercado
+                        público e privado</p>
+                </div>
+                <div class="p-4 pt-8 md:pt-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-extrabold text-primary mb-2">+<span class="counter" data-target="4000">0</span></div>
+                    <p class="text-slate-400 text-sm md:text-base">Profissionais e líderes impactados diretamente pelo
+                        trabalho e mentoria</p>
+                </div>
+                <div class="p-4 pt-8 md:pt-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-extrabold text-primary mb-2">Fundada 2018</div>
+                    <p class="text-slate-400 text-sm md:text-base">Unindo vivência madura a metodologias inovadoras e
+                        ágeis de gestão</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder/CEO Section -->
+    <section id="sobre" class="py-20 md:py-28 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <!-- CEO Photo -->
+            <div class="lg:col-span-5 flex justify-center" data-aos="fade-right">
+                <div class="relative w-full max-w-sm aspect-[3/4]">
+                    <div class="absolute -inset-4 bg-primary/20 rounded-[3rem] transform -rotate-3 -z-10"></div>
+                    <img src="assets/img/CEO.jpg" alt="Priscila Queiroz - CEO da Evolutio"
+                        class="w-full h-full object-cover rounded-[2.5rem] shadow-xl border-4 border-white">
+                </div>
+            </div>
+
+            <!-- CEO Bio -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left" data-aos="fade-left">
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Liderança com DNA de RH</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Priscila Queiroz</h2>
+                <p class="text-slate-500 font-semibold text-sm">CEO & Fundadora da Evolutio Desenvolvimento Humano</p>
+
+                <div class="text-slate-600 text-sm md:text-base leading-relaxed space-y-4 text-justify">
+                    <p>Com mais de 20 anos de atuação em Recursos Humanos, desenvolveu e conectou pessoas e empresas
+                        para que pudessem alcançar maior performance na busca de resultados, reunindo uma vasta
+                        experiência na gestão estratégica de pessoas corporativa. Já foi sócia de duas consultorias e
+                        impactou mais de 4.000 pessoas com projetos de Liderança, Inteligência Emocional e Promoção de
+                        Saúde no Trabalho, atuando no setor público e privado em diversos segmentos.</p>
+                    <p>Graduada em Psicologia desde 2006, tem especializações em Gestão de Pessoas nas Organizações pela
+                        Universidade São Judas Tadeu (USJT), em Psicodrama pela Associação Brasileira de Psicodrama e
+                        Sociodrama e em Liderança e Gestão de Pessoas pela Conquer Business School. É mestre em
+                        Vigilância em Saúde Pública pela SES-SP e autora de livro publicado na área.</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                    <!-- YouTube Modal Trigger -->
+                    <button id="open-video-btn"
+                        class="btn-primary-custom px-6 py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-md hover:shadow-lg">
+                        <!-- Play Icon -->
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Vídeo de Boas-Vindas
+                    </button>
+                    <a href="https://www.linkedin.com/in/priscila-queiroz-gp-dh/" target="_blank"
+                        class="px-6 py-3.5 rounded-xl border border-slate-300 hover:bg-slate-50 font-bold text-slate-700 flex items-center justify-center gap-2 text-sm">
+                        Linkedin Profissional
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Partners Logo Slider -->
+    <section id="clientes" class="py-16 bg-slate-50 overflow-hidden border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 mb-8 text-center">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400">Empresas e Parceiros que Confiam na
+                Evolutio</h3>
+        </div>
+
+        <!-- Infinite Slider Loop -->
+        <div class="relative flex w-full">
+            <div class="animate-slide-loop flex gap-16 items-center">
+                <!-- Original logos -->
+                <img src="assets/img/clientes/3-150x150.png" alt="Logo Cliente 3"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/4-150x150.png" alt="Logo Cliente 4"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/5-150x150.png" alt="Logo Cliente 5"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/6-150x150.png" alt="Logo Cliente 6"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/7-150x150.png" alt="Logo Cliente 7"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/8-150x150.png" alt="Logo Cliente 8"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/9-150x150.png" alt="Logo Cliente 9"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/10-150x150.png" alt="Logo Cliente 10"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/11-150x150.png" alt="Logo Cliente 11"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/12-150x150.png" alt="Logo Cliente 12"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+
+                <!-- Duplicate logos for seamless loop -->
+                <img src="assets/img/clientes/3-150x150.png" alt="Logo Cliente 3"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/4-150x150.png" alt="Logo Cliente 4"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/5-150x150.png" alt="Logo Cliente 5"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/6-150x150.png" alt="Logo Cliente 6"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/7-150x150.png" alt="Logo Cliente 7"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/8-150x150.png" alt="Logo Cliente 8"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/9-150x150.png" alt="Logo Cliente 9"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/10-150x150.png" alt="Logo Cliente 10"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/11-150x150.png" alt="Logo Cliente 11"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="assets/img/clientes/12-150x150.png" alt="Logo Cliente 12"
+                    class="h-12 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-20 md:py-28 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold text-sm uppercase tracking-wider">Histórias de Sucesso</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Quem já passou por aqui, recomenda
+                </h2>
+                <p class="text-slate-600 text-sm md:text-base mt-4 font-body">A satisfação de ver pessoas brilhando no
+                    mercado e empresas alcançando alta performance é o que nos move.</p>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:translate-y-[-4px] transition-all duration-300 flex flex-col justify-between"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="space-y-4">
+                        <!-- Rating Stars -->
+                        <div class="flex text-amber-400 gap-1">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-base italic leading-relaxed font-body">
+                            "Profissional muito atenciosa com a delicadeza da situação do cliente e atenta sobre o que o
+                            cliente diz."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 border-t border-slate-100 pt-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-xs flex items-center justify-center flex-shrink-0">
+                            TJ
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Taís Jorge</h4>
+                            <p class="text-xs text-slate-500 font-heading">Biomédica</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:translate-y-[-4px] transition-all duration-300 flex flex-col justify-between"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 gap-1">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-base italic leading-relaxed font-body">
+                            "Estou muito satisfeito com o trabalho de reformulação do meu currículo. Fui atendido com
+                            agilidade e ética."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 border-t border-slate-100 pt-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-xs flex items-center justify-center flex-shrink-0">
+                            DR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Darci Rodrigues</h4>
+                            <p class="text-xs text-slate-500 font-heading">Comprador</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:translate-y-[-4px] transition-all duration-300 flex flex-col justify-between"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 gap-1">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-base italic leading-relaxed font-body">
+                            "A consultoria me ajudou muito. Atendimento perfeito!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 border-t border-slate-100 pt-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-xs flex items-center justify-center flex-shrink-0">
+                            AT
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Artur Takeda</h4>
+                            <p class="text-xs text-slate-500">Jornalista</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:translate-y-[-4px] transition-all duration-300 flex flex-col justify-between"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 gap-1">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-base italic leading-relaxed font-body">
+                            "Gostei bastante de passar pela consultoria para me preparar para entrevistas, porque tive
+                            clareza do que realmente quero e estou 100% focada nisso e melhorar o meu networking."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 border-t border-slate-100 pt-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-xs flex items-center justify-center flex-shrink-0">
+                            LR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Luisa dos Santos Rodrigues</h4>
+                            <p class="text-xs text-slate-500 font-heading">Comércio Exterior</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:translate-y-[-4px] transition-all duration-300 flex flex-col justify-between"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 gap-1">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-base italic leading-relaxed font-body">
+                            "Você foi muito profissional, teve muita seriedade e eu me senti bem à vontade com o seu
+                            trabalho de avaliação estratégica de carreira."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 border-t border-slate-100 pt-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-xs flex items-center justify-center flex-shrink-0">
+                            CF
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Carlos Eduardo Franzão</h4>
+                            <p class="text-xs text-slate-500 font-heading">Administrativo em Direitos Autorais</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Lead Capture Section -->
+    <section id="contato" class="py-20 md:py-28 bg-slate-900 text-white relative overflow-hidden">
+        <!-- background dynamic effects -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+            <!-- Contact Info -->
+            <div class="lg:col-span-5 space-y-8 text-center lg:text-left" data-aos="fade-right">
+                <div>
+                    <span class="text-primary font-bold text-sm uppercase tracking-wider">Contato & Orçamentos</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2 mb-4">Vamos transformar a Gestão de
+                        Pessoas da sua empresa?</h2>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                        Fale diretamente conosco para agendar um diagnóstico de RH ou solicitar mentoria e estruturação
+                        sob medida.
+                    </p>
+                </div>
+
+                <div class="space-y-4 max-w-sm mx-auto lg:mx-0">
+                    <a href="mailto:contato@evolutiodh.com.br"
+                        class="flex items-center gap-4 p-4 bg-slate-800/50 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-2xl transition-all group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-slate-500">Enviar e-mail</div>
+                            <div class="text-sm font-semibold text-slate-200">contato@evolutiodh.com.br</div>
+                        </div>
+                    </a>
+
+                    <a href="tel:5511933892468"
+                        class="flex items-center gap-4 p-4 bg-slate-800/50 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-2xl transition-all group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h2.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-slate-500">Ligar diretamente</div>
+                            <div class="text-sm font-semibold text-slate-200">11 93389-2468</div>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-4 p-4 bg-slate-800/30 border border-slate-800/50 rounded-2xl">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-slate-700/50 text-slate-400 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-slate-500">Horário de Atendimento</div>
+                            <div class="text-sm font-semibold text-slate-300">Segunda-Sexta, 9h às 17h</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lead Capture Form -->
+            <div class="lg:col-span-7" data-aos="fade-left">
+                <form id="contact-form" class="bg-white text-slate-800 p-8 md:p-10 rounded-[2rem] shadow-2xl space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Solicitar Contato Especializado</h3>
+                    <p class="text-slate-500 text-sm mb-6">Preencha o formulário abaixo. Retornamos em até 24 horas
+                        úteis.</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="form-name"
+                                class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nome
+                                Completo *</label>
+                            <input type="text" id="form-name" required
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary transition-colors text-sm"
+                                placeholder="Ex: Priscila Santos">
+                        </div>
+                        <div>
+                            <label for="form-email"
+                                class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">E-mail
+                                Corporativo *</label>
+                            <input type="email" id="form-email" required
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary transition-colors text-sm"
+                                placeholder="Ex: priscila@suaempresa.com.br">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="form-phone"
+                                class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">WhatsApp /
+                                Telefone *</label>
+                            <input type="tel" id="form-phone" required
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary transition-colors text-sm"
+                                placeholder="Ex: 11 99999-9999">
+                        </div>
+                        <div>
+                            <label for="form-company"
+                                class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nome da
+                                Empresa (opcional)</label>
+                            <input type="text" id="form-company"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary transition-colors text-sm"
+                                placeholder="Ex: Evolutio PMEs">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="form-service"
+                            class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Serviço de
+                            Interesse *</label>
+                        <select id="form-service" required
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary transition-colors text-sm bg-white">
+                            <option value="Consultoria para Implantação de RH" selected>Consultoria para Implantação de
+                                RH (B2B)</option>
+                            <option value="Mentoria para desenvolvimento de lideranças">Mentoria para desenvolvimento de
+                                novas lideranças (B2B)</option>
+                            <option value="Treinamento e Desenvolvimento">Treinamento e Desenvolvimento Organizacional
+                                (B2B)</option>
+                            <option value="Recrutamento e Seleção de Talentos">Recrutamento e Seleção de Talentos (B2B)
+                            </option>
+                            <option value="Palestras e SIPAT">Palestras Corporativas e SIPAT (B2B)</option>
+                            <option value="Método Joia Rara - Carreira">Orientação e Mapeamento de Carreira (B2C)
+                            </option>
+                            <option value="Outro Serviço">Outros Serviços / Dúvidas Gerais</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="form-message"
+                            class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Mensagem
+                            *</label>
+                        <textarea id="form-message" required rows="4"
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary transition-colors text-sm"
+                            placeholder="Conte brevemente sobre as necessidades do seu projeto ou carreira..."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full btn-primary-custom py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all text-sm flex items-center justify-center gap-2">
+                        Enviar Solicitação de Contato
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+
+            <div class="md:col-span-5 space-y-4 text-center md:text-left">
+                <img src="assets/img/logoWhite.png" alt="Evolutio Logo White" class="h-10 w-auto mx-auto md:mx-0">
+                <p class="text-sm text-slate-500 max-w-sm">
+                    Desenvolvendo e lapidando talentos para tornar pequenas e médias empresas altamente competitivas.
+                </p>
+                <div class="flex justify-center md:justify-start gap-4 pt-2">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/priscilaqueiroz.carreira/?igsh=NmxiZmkya2k3b2lt" target="_blank"
+                        class="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 hover:border-primary hover:text-primary transition-colors flex items-center justify-center">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                    <!-- Linkedin -->
+                    <a href="https://www.linkedin.com/in/priscila-queiroz-gp-dh/" target="_blank"
+                        class="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 hover:border-primary hover:text-primary transition-colors flex items-center justify-center">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 space-y-4 text-center md:text-left">
+                <h4 class="font-bold text-slate-200 text-sm uppercase tracking-wider">Atendimento & Contato</h4>
+                <ul class="space-y-2 text-sm text-slate-500">
+                    <li>Segunda a Sexta: 09h00min às 17h00min</li>
+                    <li>Telefone: 11 93389-2468</li>
+                    <li>E-mail: contato@evolutiodh.com.br</li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-3 space-y-4 text-center md:text-left">
+                <h4 class="font-bold text-slate-200 text-sm uppercase tracking-wider">Legal</h4>
+                <ul class="space-y-2 text-sm text-slate-500">
+                    <li><a href="politica-privacidade.html" class="hover:text-primary transition-colors">Política de
+                            Privacidade</a></li>
+                    <li>CNPJ: 30.904.876-0001/23</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-slate-900 pt-8 text-center text-xs text-slate-600">
+            <p>&copy; <span id="year">2026</span> Evolutio Desenvolvimento Humano. Todos os direitos reservados.
+                Liderado por Priscila Queiroz.</p>
+        </div>
+    </footer>
+
+    <!-- YouTube Video Modal overlay container -->
+    <div id="video-modal"
+        class="hidden fixed inset-0 z-50 items-center justify-center p-4 bg-slate-950/85 modal-backdrop-blur transition-all duration-300">
+        <div class="relative w-full max-w-4xl aspect-video bg-black rounded-2xl shadow-2xl border border-slate-800">
+            <button id="close-video-btn"
+                class="absolute -top-12 right-0 md:-right-12 text-white hover:text-primary transition-colors p-2"
+                aria-label="Fechar vídeo">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <div id="video-container" class="w-full h-full">
+                <!-- YouTube iframe will be dynamically generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="ads-tracker.js"></script>
+    <script src="app.js"></script>
+
+    <!-- AOS.js (Animate on Scroll) Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Footer dynamic year update -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

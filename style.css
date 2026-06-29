@@ -1,0 +1,183 @@
+/*
+ * Evolutio - Folha de Estilos Customizada (style.css)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #67C1A7;
+    --color-primary-dark: #4fae93;
+    --color-primary-light: #e1f3ee;
+    --color-secondary: #0F172A;
+    --color-secondary-light: #1E293B;
+    --color-body-bg: #F8FAFC;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-body-bg);
+    color: var(--color-secondary-light);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+/* Glassmorphism for Navbar & Cards */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(241, 245, 249, 0.8);
+}
+
+/* Smooth Transitions for SPA Tabs */
+.tab-content {
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-content.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.tab-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+/* Custom testimonial slider animations */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+/* Dots navigation indicator */
+.dot.active {
+    background-color: var(--color-primary);
+    width: 1.5rem;
+}
+
+/* Animated Hamburger Menu */
+.hamburger-line {
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-open .hamburger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .hamburger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Custom Buttons & Hover Animations */
+.btn-primary-custom {
+    background-color: var(--color-primary);
+    color: white;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.btn-primary-custom:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 10px 15px -3px rgba(103, 193, 167, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-secondary-custom {
+    background-color: white;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-primary);
+    transition: all 0.3s ease;
+}
+.btn-secondary-custom:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* YouTube Video Modal wrapper */
+.modal-backdrop-blur {
+    backdrop-filter: blur(8px);
+}
+
+/* Partners logo slider loop */
+@keyframes slide-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-slide-loop {
+    display: flex;
+    width: max-content;
+    animation: slide-infinite 20s linear infinite;
+}
+
+.animate-slide-loop:hover {
+    animation-play-state: paused;
+}
+
+/* Trust badge float effect */
+.float-badge {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+}
+
+/* Mobile Menu Smooth Open/Close Animation */
+.mobile-menu-transition {
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu.menu-active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+}
